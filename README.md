@@ -1,4 +1,4 @@
-基于django 框架 redis  elasticsearch web指纹搜索引擎
+基于django 框架 redis  elasticsearch web指纹搜索引擎 python3.5!!
 ==== 
 ![](https://github.com/cuijianxiong/websearch/blob/master/1.png) 
 ![](https://github.com/cuijianxiong/websearch/blob/master/2.png)
