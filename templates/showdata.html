@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/dist/css/bootstrap.min.css' %}">
+
+</head>
+<body>
+{%if count != ''%}
+<h1>共计{{ count }}条内容</h1>
+{% endif %}
+<div class=\"page-header\">
+
+
+    <div>
+        <div class="table-responsive">
+    <table class="table table-bordered">
+    <thread>
+
+        <tr class="active">
+            <th>ip</th>
+            <th>title</th>
+            <th>appname</th>
+            <th>地理位置</th>
+            <th>domain</th>
+        </tr>
+    </thread>
+        <tbody>
+        {%  for i in portarray %}
+    <tr class="success">
+
+        <td ><a href="http://{{ i.ip }}:{{ i.port }}" target="_Blank">{{ i.ip }}:{{ i.port }}</a></td>
+        <td >{{ i.title }}           </td>
+        <td >{{ i.appname }}          </td>
+        <td>{{ i.ipaddrs }}</td>
+        <td>{{ i.domain }}</td>
+    </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+    </div>
+    </div></div>
+            <div id="pagination">
+                                <ul id="pagination-flickr">
+                                    {% csrf_token %}
+                                    {% if page %}
+                                    {% for number in pagec %}
+                                        <a href="/search/?page={{ number }}&searchcontent={{ searchdata }}">{{ number }}</a>
+                                    {% endfor %}
+                                    {% endif %}
+                                </ul>
+
+            </div>
+<script src="{% static 'bootstrap-3.3.7/dist/js/jquery-2.1.1.min.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7/dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

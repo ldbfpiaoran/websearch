@@ -1,0 +1,21 @@
+[2017-04-20 19:57:12,738][INFO ][node                     ] [Tri-Man] version[2.3.4], pid[2363], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-04-20 19:57:12,743][INFO ][node                     ] [Tri-Man] initializing ...
+[2017-04-20 19:57:13,378][INFO ][plugins                  ] [Tri-Man] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2017-04-20 19:57:13,422][INFO ][env                      ] [Tri-Man] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [11.8gb], net total_space [19.5gb], spins? [possibly], types [ext4]
+[2017-04-20 19:57:13,422][INFO ][env                      ] [Tri-Man] heap size [1007.3mb], compressed ordinary object pointers [true]
+[2017-04-20 19:57:13,422][WARN ][env                      ] [Tri-Man] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-04-20 19:57:15,384][INFO ][node                     ] [Tri-Man] initialized
+[2017-04-20 19:57:15,384][INFO ][node                     ] [Tri-Man] starting ...
+[2017-04-20 19:57:15,566][INFO ][transport                ] [Tri-Man] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-04-20 19:57:15,572][INFO ][discovery                ] [Tri-Man] elasticsearch/BSP-MKWZTuuoYRbAqzzS5Q
+[2017-04-20 19:57:18,630][INFO ][cluster.service          ] [Tri-Man] new_master {Tri-Man}{BSP-MKWZTuuoYRbAqzzS5Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-04-20 19:57:18,717][INFO ][http                     ] [Tri-Man] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-04-20 19:57:18,717][INFO ][node                     ] [Tri-Man] started
+[2017-04-20 19:57:18,743][INFO ][gateway                  ] [Tri-Man] recovered [0] indices into cluster_state
+[2017-04-20 20:03:01,480][INFO ][cluster.metadata         ] [Tri-Man] [chttp] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings [ip_data]
+[2017-04-20 20:03:02,331][INFO ][cluster.routing.allocation] [Tri-Man] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[chttp][0], [chttp][3], [chttp][4], [chttp][3], [chttp][0]] ...]).
+[2017-04-20 20:03:02,512][INFO ][cluster.metadata         ] [Tri-Man] [chttp] update_mapping [ip_data]
+[2017-04-20 20:19:17,077][INFO ][node                     ] [Tri-Man] stopping ...
+[2017-04-20 20:19:17,419][INFO ][node                     ] [Tri-Man] stopped
+[2017-04-20 20:19:17,420][INFO ][node                     ] [Tri-Man] closing ...
+[2017-04-20 20:19:17,450][INFO ][node                     ] [Tri-Man] closed

@@ -1,0 +1,168 @@
+[2017-04-28 11:28:03,867][INFO ][node                     ] [Tom Foster] version[2.3.4], pid[2652], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-04-28 11:28:03,867][INFO ][node                     ] [Tom Foster] initializing ...
+[2017-04-28 11:28:04,230][INFO ][plugins                  ] [Tom Foster] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2017-04-28 11:28:04,252][INFO ][env                      ] [Tom Foster] using [1] data paths, mounts [[(C:)]], net usable_space [101.8gb], net total_space [171.9gb], spins? [unknown], types [NTFS]
+[2017-04-28 11:28:04,252][INFO ][env                      ] [Tom Foster] heap size [910.5mb], compressed ordinary object pointers [true]
+[2017-04-28 11:28:05,667][INFO ][node                     ] [Tom Foster] initialized
+[2017-04-28 11:28:05,667][INFO ][node                     ] [Tom Foster] starting ...
+[2017-04-28 11:28:06,284][INFO ][transport                ] [Tom Foster] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2017-04-28 11:28:06,303][INFO ][discovery                ] [Tom Foster] elasticsearch/qOadpxtAQgarYM8t0K0_nw
+[2017-04-28 11:28:10,483][INFO ][cluster.service          ] [Tom Foster] new_master {Tom Foster}{qOadpxtAQgarYM8t0K0_nw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-04-28 11:28:10,806][INFO ][gateway                  ] [Tom Foster] recovered [1] indices into cluster_state
+[2017-04-28 11:28:11,573][INFO ][http                     ] [Tom Foster] publish_address {127.0.0.1:9201}, bound_addresses {127.0.0.1:9201}, {[::1]:9200}
+[2017-04-28 11:28:11,575][INFO ][node                     ] [Tom Foster] started
+[2017-04-28 11:28:13,149][INFO ][cluster.routing.allocation] [Tom Foster] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[chttp][4]] ...]).
+[2017-04-28 11:29:39,168][DEBUG][action.search            ] [Tom Foster] [chttp][4], node[qOadpxtAQgarYM8t0K0_nw], [P], v[8], s[STARTED], a[id=UQ9sQsrqTzCIMuoFEMZJXw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3cc38bdb] lastShard [true]
+RemoteTransportException[[Tom Foster][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [titile]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-28 11:29:39,168][DEBUG][action.search            ] [Tom Foster] [chttp][2], node[qOadpxtAQgarYM8t0K0_nw], [P], v[8], s[STARTED], a[id=6WazhUN6RwmtiIQsA88bgg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3cc38bdb] lastShard [true]
+RemoteTransportException[[Tom Foster][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [titile]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-28 11:29:39,168][DEBUG][action.search            ] [Tom Foster] [chttp][1], node[qOadpxtAQgarYM8t0K0_nw], [P], v[8], s[STARTED], a[id=NYz_Q2d7STCnORr9a5baLw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3cc38bdb]
+RemoteTransportException[[Tom Foster][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [titile]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-28 11:29:39,168][DEBUG][action.search            ] [Tom Foster] [chttp][0], node[qOadpxtAQgarYM8t0K0_nw], [P], v[8], s[STARTED], a[id=5o565wYcQJWSQyK5x0WAzA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3cc38bdb] lastShard [true]
+RemoteTransportException[[Tom Foster][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [titile]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-28 11:29:39,168][DEBUG][action.search            ] [Tom Foster] [chttp][3], node[qOadpxtAQgarYM8t0K0_nw], [P], v[8], s[STARTED], a[id=jaQmXpGpTpiAhxlpOAMpig]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3cc38bdb] lastShard [true]
+RemoteTransportException[[Tom Foster][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [titile]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-28 11:29:39,183][DEBUG][action.search            ] [Tom Foster] All shards failed for phase: [query]
+RemoteTransportException[[Tom Foster][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "size": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": {"titile": "辽宁"}}}}]]; nested: QueryParsingException[[match] query does not support [titile]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [titile]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-28 15:18:44,953][INFO ][node                     ] [Tom Foster] stopping ...
+[2017-04-28 15:18:45,200][INFO ][node                     ] [Tom Foster] stopped
+[2017-04-28 15:18:45,200][INFO ][node                     ] [Tom Foster] closing ...
+[2017-04-28 15:18:45,207][INFO ][node                     ] [Tom Foster] closed

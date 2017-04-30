@@ -1,0 +1,31 @@
+[2017-04-26 16:50:33,399][INFO ][node                     ] [Blob] version[2.3.4], pid[1844], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-04-26 16:50:33,399][INFO ][node                     ] [Blob] initializing ...
+[2017-04-26 16:50:34,448][INFO ][plugins                  ] [Blob] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2017-04-26 16:50:34,568][INFO ][env                      ] [Blob] using [1] data paths, mounts [[(C:)]], net usable_space [103.9gb], net total_space [171.9gb], spins? [unknown], types [NTFS]
+[2017-04-26 16:50:34,568][INFO ][env                      ] [Blob] heap size [910.5mb], compressed ordinary object pointers [true]
+[2017-04-26 16:50:38,405][INFO ][node                     ] [Blob] initialized
+[2017-04-26 16:50:38,405][INFO ][node                     ] [Blob] starting ...
+[2017-04-26 16:50:39,159][INFO ][transport                ] [Blob] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2017-04-26 16:50:39,175][INFO ][discovery                ] [Blob] elasticsearch/0PYWtCEbQ6CXVWbt7cCS8Q
+[2017-04-26 16:50:43,250][INFO ][cluster.service          ] [Blob] new_master {Blob}{0PYWtCEbQ6CXVWbt7cCS8Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-04-26 16:50:43,496][INFO ][gateway                  ] [Blob] recovered [1] indices into cluster_state
+[2017-04-26 16:50:44,170][INFO ][http                     ] [Blob] publish_address {127.0.0.1:9201}, bound_addresses {127.0.0.1:9201}, {[::1]:9200}
+[2017-04-26 16:50:44,170][INFO ][node                     ] [Blob] started
+[2017-04-26 16:50:45,632][INFO ][cluster.routing.allocation] [Blob] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[chttp][1]] ...]).
+[2017-04-26 17:37:03,254][WARN ][http.netty               ] [Blob] Caught exception while handling client http traffic, closing connection [id: 0x2f0ea1e7, /0:0:0:0:0:0:0:1:57937 => /0:0:0:0:0:0:0:1:9200]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

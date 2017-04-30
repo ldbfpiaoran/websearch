@@ -1,0 +1,37 @@
+apt-get install mysql-server mysql-client
+
+
+vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+在 [mysqld] 域下加上：
+
+character-set-server=utf8
+
+
+
+pip3 install django==1.9.5
+pip3 install pymysql==0.7.2
+pip3 install BeautifulSoup4==4.5.3
+celery=3.1.25
+django-celery 3.2.1 
+flower 0.9.1
+lxml     3.7.3
+requests   2.13.0
+redis   2.10.5
+
+apt-get install redis-server 
+
+source sql文件
+redis-server
+python3 manage.py celery flower   #可选择
+python3 manage.py celery worker -l info -c 3   #可选择进程
+
+查看社工库搜索
+
+apt-get dist-upgrade
+
+
+修改mysql  utf8否则不能写入数据库
+
+
+搜索引擎未完成

@@ -1,0 +1,733 @@
+[2017-04-27 10:49:54,694][INFO ][node                     ] [Paralyzer] version[2.3.4], pid[10764], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-04-27 10:49:54,694][INFO ][node                     ] [Paralyzer] initializing ...
+[2017-04-27 10:49:55,051][INFO ][plugins                  ] [Paralyzer] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2017-04-27 10:49:55,067][INFO ][env                      ] [Paralyzer] using [1] data paths, mounts [[(C:)]], net usable_space [103.2gb], net total_space [171.9gb], spins? [unknown], types [NTFS]
+[2017-04-27 10:49:55,067][INFO ][env                      ] [Paralyzer] heap size [910.5mb], compressed ordinary object pointers [true]
+[2017-04-27 10:49:56,545][INFO ][node                     ] [Paralyzer] initialized
+[2017-04-27 10:49:56,545][INFO ][node                     ] [Paralyzer] starting ...
+[2017-04-27 10:49:57,200][INFO ][transport                ] [Paralyzer] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2017-04-27 10:49:57,232][INFO ][discovery                ] [Paralyzer] elasticsearch/BFGcYliAQKKMmu0cMAIprA
+[2017-04-27 10:50:01,369][INFO ][cluster.service          ] [Paralyzer] new_master {Paralyzer}{BFGcYliAQKKMmu0cMAIprA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-04-27 10:50:01,647][INFO ][gateway                  ] [Paralyzer] recovered [1] indices into cluster_state
+[2017-04-27 10:50:02,132][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ShardNotFoundException[no such shard];
+Caused by: [chttp][[chttp][3]] ShardNotFoundException[no such shard]
+	at org.elasticsearch.index.IndexService.shardSafe(IndexService.java:197)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:639)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:02,148][WARN ][rest.suppressed          ] path: /chttp/ip_data/_search, params: {index=chttp, type=ip_data}
+Failed to execute phase [query], all shards failed
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:855)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:833)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:02,132][INFO ][http                     ] [Paralyzer] publish_address {127.0.0.1:9201}, bound_addresses {127.0.0.1:9201}, {[::1]:9200}
+[2017-04-27 10:50:02,148][INFO ][node                     ] [Paralyzer] started
+[2017-04-27 10:50:02,185][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: IllegalIndexShardStateException[CurrentState[RECOVERING] operations only allowed when shard state is one of [POST_RECOVERY, STARTED, RELOCATED]];
+Caused by: [chttp][[chttp][2]] IllegalIndexShardStateException[CurrentState[RECOVERING] operations only allowed when shard state is one of [POST_RECOVERY, STARTED, RELOCATED]]
+	at org.elasticsearch.index.shard.IndexShard.readAllowed(IndexShard.java:1035)
+	at org.elasticsearch.index.shard.IndexShard.acquireSearcher(IndexShard.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:643)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:02,185][WARN ][rest.suppressed          ] path: /chttp/ip_data/_search, params: {index=chttp, type=ip_data}
+Failed to execute phase [query], all shards failed
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:855)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:833)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:02,185][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: IllegalIndexShardStateException[CurrentState[RECOVERING] operations only allowed when shard state is one of [POST_RECOVERY, STARTED, RELOCATED]];
+Caused by: [chttp][[chttp][3]] IllegalIndexShardStateException[CurrentState[RECOVERING] operations only allowed when shard state is one of [POST_RECOVERY, STARTED, RELOCATED]]
+	at org.elasticsearch.index.shard.IndexShard.readAllowed(IndexShard.java:1035)
+	at org.elasticsearch.index.shard.IndexShard.acquireSearcher(IndexShard.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:643)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:02,185][WARN ][rest.suppressed          ] path: /chttp/ip_data/_search, params: {index=chttp, type=ip_data}
+Failed to execute phase [query], all shards failed
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:855)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:833)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:02,201][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: IllegalIndexShardStateException[CurrentState[RECOVERING] operations only allowed when shard state is one of [POST_RECOVERY, STARTED, RELOCATED]];
+Caused by: [chttp][[chttp][3]] IllegalIndexShardStateException[CurrentState[RECOVERING] operations only allowed when shard state is one of [POST_RECOVERY, STARTED, RELOCATED]]
+	at org.elasticsearch.index.shard.IndexShard.readAllowed(IndexShard.java:1035)
+	at org.elasticsearch.index.shard.IndexShard.acquireSearcher(IndexShard.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:643)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:02,201][WARN ][rest.suppressed          ] path: /chttp/ip_data/_search, params: {index=chttp, type=ip_data}
+Failed to execute phase [query], all shards failed
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:855)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:833)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2017-04-27 10:50:03,873][INFO ][cluster.routing.allocation] [Paralyzer] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[chttp][4]] ...]).
+[2017-04-27 14:16:32,986][DEBUG][action.search            ] [Paralyzer] [chttp][2], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=EEJut6DoRU-7dP5SS6Q4zQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@77ffa8e3] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:32,986][DEBUG][action.search            ] [Paralyzer] [chttp][0], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=bBT0wVllTDugkzAifBgp6Q]: Failed to execute [org.elasticsearch.action.search.SearchRequest@77ffa8e3] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:32,986][DEBUG][action.search            ] [Paralyzer] [chttp][4], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=TgKrO9KISniAFGJvEgcWeg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@77ffa8e3] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:32,986][DEBUG][action.search            ] [Paralyzer] [chttp][3], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=mQ7DpgyWQeyN10p8U6iOPw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@77ffa8e3]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:32,986][DEBUG][action.search            ] [Paralyzer] [chttp][1], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=CTBNs96sRt-N0NV5b5LqYA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@77ffa8e3] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:32,986][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"multi_match": {"query": "218.60.147.134", "fidlds": ["ip"]}}, "size": 15, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:48,364][DEBUG][action.search            ] [Paralyzer] [chttp][3], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=mQ7DpgyWQeyN10p8U6iOPw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@419ee5e0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:48,364][DEBUG][action.search            ] [Paralyzer] [chttp][1], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=CTBNs96sRt-N0NV5b5LqYA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@419ee5e0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:48,364][DEBUG][action.search            ] [Paralyzer] [chttp][4], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=TgKrO9KISniAFGJvEgcWeg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@419ee5e0]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:48,364][DEBUG][action.search            ] [Paralyzer] [chttp][0], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=bBT0wVllTDugkzAifBgp6Q]: Failed to execute [org.elasticsearch.action.search.SearchRequest@419ee5e0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:48,364][DEBUG][action.search            ] [Paralyzer] [chttp][2], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=EEJut6DoRU-7dP5SS6Q4zQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@419ee5e0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:16:48,364][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+Caused by: SearchParseException[failed to parse search source [{"size": 15, "query": {"multi_match": {"fidlds": ["ip"], "query": "218.60.147.134"}}, "from": 15}]]; nested: QueryParsingException[[match] query does not support [fidlds]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[[match] query does not support [fidlds]]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:138)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:31:38,654][DEBUG][action.search            ] [Paralyzer] [chttp][0], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=bBT0wVllTDugkzAifBgp6Q]: Failed to execute [org.elasticsearch.action.search.SearchRequest@297b5892] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:31:38,654][DEBUG][action.search            ] [Paralyzer] [chttp][1], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=CTBNs96sRt-N0NV5b5LqYA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@297b5892] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:31:38,654][DEBUG][action.search            ] [Paralyzer] [chttp][4], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=TgKrO9KISniAFGJvEgcWeg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@297b5892] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:31:38,654][DEBUG][action.search            ] [Paralyzer] [chttp][2], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=EEJut6DoRU-7dP5SS6Q4zQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@297b5892]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:31:38,654][DEBUG][action.search            ] [Paralyzer] [chttp][3], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=mQ7DpgyWQeyN10p8U6iOPw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@297b5892] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:31:38,654][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:32:06,392][DEBUG][action.search            ] [Paralyzer] [chttp][1], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=CTBNs96sRt-N0NV5b5LqYA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@569e84f0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:32:06,392][DEBUG][action.search            ] [Paralyzer] [chttp][4], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=TgKrO9KISniAFGJvEgcWeg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@569e84f0]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:32:06,392][DEBUG][action.search            ] [Paralyzer] [chttp][3], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=mQ7DpgyWQeyN10p8U6iOPw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@569e84f0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:32:06,392][DEBUG][action.search            ] [Paralyzer] [chttp][0], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=bBT0wVllTDugkzAifBgp6Q]: Failed to execute [org.elasticsearch.action.search.SearchRequest@569e84f0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:32:06,392][DEBUG][action.search            ] [Paralyzer] [chttp][2], node[BFGcYliAQKKMmu0cMAIprA], [P], v[6], s[STARTED], a[id=EEJut6DoRU-7dP5SS6Q4zQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@569e84f0] lastShard [true]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 14:32:06,392][DEBUG][action.search            ] [Paralyzer] All shards failed for phase: [query]
+RemoteTransportException[[Paralyzer][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+Caused by: SearchParseException[failed to parse search source [{"from": 15, "query": {"multi_match": {"fields": ["ip", "title", "header", "appname", "ipaddrs", "domain"], "query": null}}, "size": 15}]]; nested: QueryParsingException[No text specified for multi_match query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [chttp] QueryParsingException[No text specified for multi_match query]
+	at org.elasticsearch.index.query.MultiMatchQueryParser.parse(MultiMatchQueryParser.java:144)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-04-27 16:44:32,476][INFO ][node                     ] [Paralyzer] stopping ...
+[2017-04-27 16:44:32,596][INFO ][node                     ] [Paralyzer] stopped
+[2017-04-27 16:44:32,596][INFO ][node                     ] [Paralyzer] closing ...
+[2017-04-27 16:44:32,604][INFO ][node                     ] [Paralyzer] closed

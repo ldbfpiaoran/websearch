@@ -1,0 +1,190 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/dist/css/bootstrap.min.css' %}">
+    <style>
+    body{
+        padding-top:50px;
+    }
+        .start-1{
+            padding: 10px 0px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header"> <!---  首页导航栏 !-->
+            <a href="#" class="navbar-brand">web指纹搜索</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/index/">首页</a></li>
+                <li><a href="/webscan/">web指纹识别</a> </li>
+                <li><a href="/search/">指纹搜索</a> </li>
+                <li><a href="/scan/">添加任务</a> </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!---  添加任务 !-->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+     添加任务
+</button>
+<div class="modal fade " id="myModal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog bs-example-modal-lg">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">添加任务</h4>
+            </div>
+            <form action="/addtask/" method="post" onsubmit="GetInfo();return false;">
+            <div class="modal-body">
+
+                <div class="form-group">
+                    {% csrf_token %}
+                    <label class="control-label"  style="color:deepskyblue;font-size:16px;">任务名称 :</label>
+                    <input type="text" class="from-control" value=""  name="taskname">
+                </div>
+                <div class="form-group">
+                    <label class="control-label"  style="color:deepskyblue;font-size:16px;">任务内容 :</label>
+                    <input type="text" class="from-control" value=""  name="taskdata">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" style="color:deepskyblue;font-size:16px;">扫描端口 :</label>
+                    <input type="text" class="from-control" value="80,81,82,83,84,85,86,87,88,89,90,8080,8081,8082,8083,8084,8085,8086,8087,8088,8089,8090"  name="taskport">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">
+                    提交
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" >
+                    关闭
+                </button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+<!---  任务列表 !-->
+<div class="container">
+    <div class="start-1">
+        <div class="table-responsive">
+    <table class="table table-bordered">
+    <thread>
+
+        <tr class="active">
+            <th>id</th>
+            <th>状态</th>
+            <th>任务名称</th>
+            <th>任务内容</th>
+            <th>任务端口</th>
+            <th>选项</th>
+            <th>任务进度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+    </thread>
+        <tbody>
+        {%  for i in data %}
+    <tr class="success">
+        <td >{{ i.id }}</td>
+        {% ifequal i.status '0' %}
+            <td >未开始</td>
+        {% endifequal %}
+        {% ifequal i.status '1' %}
+            <td >探测中</td>
+        {% endifequal %}
+        {% ifequal i.status '2' %}
+            <td >探测完毕</td>
+        {% endifequal %}
+        {% ifequal i.status '3' %}
+            <td >扫描中</td>
+        {% endifequal %}
+        {% ifequal i.status '4' %}
+            <td >已完成</td>
+        {% endifequal %}
+        <td >{{ i.taskname }}</td>
+        <td >{{ i.taskdata }}</td>
+        <td>{{ i.taskport }}</td>
+
+        <td ><button type="button" data-loading-text="探测存活" class="btn btn-success js-loading-btn start" >探测存活</button>&nbsp;&nbsp;
+        <button type="button" data-loading-text="启动任务" class="btn btn-warning stop" >启动任务</button>&nbsp;&nbsp
+        <button type="button" data-loading-text="删除任务" class="btn btn-danger delete" >删除任务</button></td>
+        <td>
+            <div class="progress progress-striped">
+         <div class="progress-bar progress-bar-info" style="width:{{ i.completenum }}%;" role="progressbar" aria-valuenow="40" aria-valuemax="100" aria-valuemin="0">{{ i.completenum }}%</div>
+     </div></td>
+    </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+            <div id="pagination">
+                                <ul id="pagination-flickr">
+                                    {% csrf_token %}
+                                    {% if result_list.has_previous %}
+                                    <li class="previous"><a href="?page={{ result_list.previous_page_number }}" style="color:red;font-size:16px;">&laquo;上一页</a></li>
+                                    {% else %}
+                                    <li class="previous-off" style="color:red;font-size:16px;">上一页</li>
+                                    {% endif %}
+                                    <li class="active" style="color:red;font-size:16px;">{{ result_list.number }}/{{ result_list.paginator.num_pages }}</li>
+                                    {% if result_list.has_next %}
+                                    <li class="next"><a href="?page={{ result_list.next_page_number }}" style="color:red;font-size:16px;">下一页 &raquo;</a></li>
+                                    {% else %}
+                                    <li class="next-off" style="color:red;font-size:16px;">下一页 </li>
+                                    {% endif %}
+                                </ul>
+
+            </div>
+</div>
+    </div>
+</div>
+<script src="{% static 'bootstrap-3.3.7/dist/js/jquery-2.1.1.min.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7/dist/js/bootstrap.min.js' %}"></script>
+<script>
+    function post(URL, PARAMS) {
+    var temp = document.createElement("form");
+    temp.action = URL;
+    temp.method = "post";
+    temp.style.display = "none";
+    for (var x in PARAMS) {
+        var opt = document.createElement("textarea");
+        opt.name = x;
+        opt.value = PARAMS[x];
+        temp.appendChild(opt);
+    }
+    document.body.appendChild(temp);
+    temp.submit();
+    return temp;
+}
+  $(".start").click(function () {
+
+                var taskid = $(this).parents("tr").children("td:nth-child(1)").text();
+                alert(taskid)
+                post('/addjob/',{tasksid:taskid,csrfmiddlewaretoken: '{{ csrf_token }}'})
+
+            });
+  $(".stop").click(function () {
+
+                var taskid = $(this).parents("tr").children("td:nth-child(1)").text();
+                alert(taskid)
+                post('/startjob/',{tasksid:taskid,csrfmiddlewaretoken: '{{ csrf_token }}'})
+
+            });
+  $(".delete").click(function () {
+
+                var taskid = $(this).parents("tr").children("td:nth-child(1)").text();
+
+    post('/delete/',{tasksid:taskid,csrfmiddlewaretoken: '{{ csrf_token }}'})
+            });
+</script>
+</body>
+</html>

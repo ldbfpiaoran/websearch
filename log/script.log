@@ -1,0 +1,1701 @@
+2017-03-17 14:10:10,857 [Thread-2:1376] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 14:10:11,154 [Thread-3:1016] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-17 14:16:13,435 [Thread-2:1624] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 14:17:25,860 [Thread-2:10524] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 15:55:32,284 [Thread-2:11788] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-17 15:55:32,476 [Thread-3:8548] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-17 15:55:39,455 [Thread-4:11708] [django.request:182] [base:get_response] [WARNING]- Not Found: /searcj
+2017-03-17 16:21:16,679 [Thread-11:1376] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-18 15:14:05,846 [Thread-2:9024] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-18 15:14:06,275 [Thread-3:9800] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-26 17:38:49,512 [Thread-2:6120] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-26 17:38:49,727 [Thread-3:7740] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-26 17:58:43,239 [Thread-2:10176] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-26 18:00:40,023 [Thread-8:7392] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-26 18:03:59,620 [Thread-2:7124] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 50, in search
+    return render(request[:10],'search.html',locals())
+TypeError: 'WSGIRequest' object is not subscriptable
+2017-03-26 18:04:17,713 [Thread-2:9912] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 50, in search
+    return render(request[0:10],'search.html',locals())
+TypeError: 'WSGIRequest' object is not subscriptable
+2017-03-26 18:17:44,697 [Thread-12:7440] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /admin/login/
+2017-03-26 18:34:01,465 [Thread-2:8628] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 57, in search
+    return render(request,'search.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\defaulttags.py", line 167, in render
+    values = list(values)
+TypeError: 'httpdata' object is not iterable
+2017-03-26 18:36:11,320 [Thread-6:9452] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 59, in search
+    return render(request,'search.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\defaulttags.py", line 167, in render
+    values = list(values)
+TypeError: 'httpdata' object is not iterable
+2017-03-26 21:33:23,295 [Thread-2:9352] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-29 20:53:34,707 [Thread-2:10628] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-29 20:53:35,009 [Thread-3:10972] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-29 21:31:35,680 [Thread-2:1516] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-29 21:32:01,264 [Thread-5:3576] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /insertip/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 61, in insert_ip
+    return render(request,)
+TypeError: render() missing 1 required positional argument: 'template_name'
+2017-03-30 21:38:08,839 [Thread-2:8704] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-30 21:38:09,076 [Thread-3:2624] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-30 21:40:12,693 [Thread-4:1296] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/css/bootstrap.min14ed.css
+2017-03-30 21:40:12,705 [Thread-5:7048] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/css/font-awesome.min93e3.css
+2017-03-30 21:40:12,711 [Thread-6:8684] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/css/animate.min.css
+2017-03-30 21:40:12,718 [Thread-7:3872] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/css/style.min862f.css
+2017-03-30 21:40:12,724 [Thread-8:9056] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 21:40:12,725 [Thread-9:8216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v148b2.html
+2017-03-30 21:40:12,739 [Thread-11:764] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 21:40:12,740 [Thread-10:8648] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 21:40:12,741 [Thread-12:8780] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 21:40:12,746 [Thread-13:8760] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 21:40:12,749 [Thread-14:2284] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 21:40:12,757 [Thread-15:1860] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 21:40:12,763 [Thread-16:2776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 21:40:12,771 [Thread-17:8208] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 21:40:12,775 [Thread-18:6420] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 21:40:12,777 [Thread-19:8652] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 21:40:12,780 [Thread-20:2644] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 21:40:12,788 [Thread-21:2312] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 21:40:12,792 [Thread-22:7424] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 21:40:12,899 [Thread-23:4832] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 21:40:13,163 [Thread-24:7868] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/favicon.ico
+2017-03-30 21:42:48,618 [Thread-25:2648] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 21:43:33,054 [Thread-31:1132] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 21:44:02,703 [Thread-37:7620] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 21:44:30,502 [Thread-43:2284] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 21:46:09,445 [Thread-2:7364] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-30 21:46:13,413 [Thread-4:8864] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 21:47:01,758 [Thread-5:9088] [django.request:182] [base:get_response] [WARNING]- Not Found: /static
+2017-03-30 21:48:13,836 [Thread-7:3916] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 21:50:51,535 [Thread-8:9852] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 21:51:23,319 [Thread-15:8468] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 21:51:23,325 [Thread-16:8980] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v148b2.html
+2017-03-30 21:51:23,329 [Thread-17:7544] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 21:51:23,333 [Thread-14:9468] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 21:51:23,341 [Thread-18:7512] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 21:51:23,347 [Thread-19:1616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 21:51:23,351 [Thread-20:8436] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 21:51:23,352 [Thread-21:2216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 21:51:23,359 [Thread-22:8368] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 21:51:23,359 [Thread-23:6528] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 21:51:23,369 [Thread-24:10032] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 21:51:23,378 [Thread-26:3384] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 21:51:23,381 [Thread-25:9932] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 21:51:23,393 [Thread-27:9836] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 21:51:23,396 [Thread-28:4048] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 21:51:23,397 [Thread-29:7048] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 21:52:19,547 [Thread-39:2776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 21:52:19,554 [Thread-40:1860] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 21:52:19,561 [Thread-41:6412] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 21:52:19,564 [Thread-42:10076] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 21:52:19,568 [Thread-43:8684] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v148b2.html
+2017-03-30 21:52:19,572 [Thread-44:9824] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 21:52:19,577 [Thread-45:8616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 21:52:19,578 [Thread-46:3912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 21:52:19,584 [Thread-47:9256] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 21:52:19,594 [Thread-48:10168] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 21:52:19,605 [Thread-50:7424] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 21:52:19,609 [Thread-51:5604] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 21:52:19,618 [Thread-52:7632] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 21:52:19,623 [Thread-53:9604] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 21:52:19,628 [Thread-54:8200] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 21:52:19,638 [Thread-55:8724] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 21:52:55,999 [Thread-58:9536] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/cmscan
+2017-03-30 21:53:29,776 [Thread-64:9412] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 21:53:29,788 [Thread-65:6476] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 21:53:29,793 [Thread-66:9856] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v148b2.html
+2017-03-30 21:53:29,796 [Thread-67:6880] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 21:53:29,798 [Thread-68:7080] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 21:53:29,801 [Thread-69:6976] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 21:53:29,806 [Thread-70:8204] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 21:53:29,815 [Thread-71:3872] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 21:53:29,820 [Thread-72:7384] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 21:53:29,826 [Thread-73:1012] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 21:53:29,836 [Thread-75:1436] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 21:53:29,841 [Thread-76:10092] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 21:53:29,845 [Thread-77:6984] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 21:53:29,852 [Thread-78:9624] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 21:53:29,856 [Thread-79:8324] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 21:53:29,866 [Thread-80:4896] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 21:53:31,162 [Thread-83:7680] [django.request:182] [base:get_response] [WARNING]- Not Found: /cmscan
+2017-03-30 21:53:36,928 [Thread-84:8928] [django.request:182] [base:get_response] [WARNING]- Not Found: /cmscan
+2017-03-30 21:53:49,358 [Thread-92:8732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 21:53:49,368 [Thread-93:8960] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 21:53:49,372 [Thread-94:9224] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v148b2.html
+2017-03-30 21:53:49,376 [Thread-95:5084] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 21:53:49,380 [Thread-96:5056] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 21:53:49,385 [Thread-97:4776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 21:53:49,389 [Thread-98:2644] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 21:53:49,393 [Thread-99:8428] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 21:53:49,398 [Thread-100:8500] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 21:53:49,409 [Thread-101:3052] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 21:53:49,419 [Thread-103:7732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 21:53:49,422 [Thread-104:4480] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 21:53:49,427 [Thread-105:8864] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 21:53:49,453 [Thread-106:9516] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 21:53:49,456 [Thread-107:7456] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 21:53:49,460 [Thread-108:7328] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 21:54:08,174 [Thread-116:4344] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 21:54:08,181 [Thread-117:9684] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 21:54:08,195 [Thread-119:8216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 21:54:08,198 [Thread-120:8232] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 21:54:08,201 [Thread-121:2428] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 21:54:08,202 [Thread-122:4456] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 21:54:08,206 [Thread-123:8320] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 21:54:08,225 [Thread-125:7776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 21:54:08,229 [Thread-126:9668] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 21:54:08,241 [Thread-128:7308] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 21:54:08,245 [Thread-129:9644] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 21:54:08,248 [Thread-130:4424] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 21:54:08,257 [Thread-131:9936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 21:54:08,258 [Thread-132:6416] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 21:54:08,271 [Thread-133:9964] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 21:54:22,461 [Thread-140:8456] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v2.html
+2017-03-30 22:12:07,314 [Thread-160:8368] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:12:07,323 [Thread-161:2248] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:12:07,329 [Thread-162:8324] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:12:07,336 [Thread-164:4872] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:12:07,338 [Thread-165:680] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:12:07,341 [Thread-166:9828] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:12:07,347 [Thread-167:9040] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:12:07,353 [Thread-168:8464] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:12:07,363 [Thread-169:3576] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:12:07,371 [Thread-172:7172] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:12:07,375 [Thread-173:2996] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:12:07,381 [Thread-174:3528] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:12:07,386 [Thread-175:7020] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:12:07,395 [Thread-176:4972] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:12:07,398 [Thread-177:8800] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:12:40,524 [Thread-198:8828] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:12:40,532 [Thread-199:3380] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:12:40,541 [Thread-201:9612] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:12:40,547 [Thread-202:8796] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:12:40,550 [Thread-203:8856] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:12:40,553 [Thread-204:7228] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:12:40,555 [Thread-205:5056] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:12:40,569 [Thread-207:9756] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:12:40,577 [Thread-208:4884] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:12:40,607 [Thread-210:8548] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:12:40,611 [Thread-211:8284] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:12:40,621 [Thread-212:4424] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:12:40,626 [Thread-213:7820] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:12:40,635 [Thread-214:8132] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:12:40,639 [Thread-215:9896] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:12:40,891 [Thread-218:1192] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:12:40,892 [Thread-219:8488] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:12:40,892 [Thread-220:9908] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:12:40,893 [Thread-221:8772] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:12:40,894 [Thread-222:2624] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:12:40,899 [Thread-223:7744] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:12:40,908 [Thread-224:9656] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:12:40,949 [Thread-225:10080] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:12:40,953 [Thread-226:4628] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:13:01,354 [Thread-232:9412] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:13:01,362 [Thread-233:9556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:13:01,365 [Thread-234:764] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:13:01,375 [Thread-236:9224] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:13:01,381 [Thread-237:4108] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:13:01,384 [Thread-238:8776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:13:01,396 [Thread-239:7112] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:13:01,397 [Thread-240:4584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:13:01,410 [Thread-241:2840] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:13:01,452 [Thread-244:7428] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:13:01,458 [Thread-245:9424] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:13:01,460 [Thread-246:7556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:13:01,463 [Thread-247:6856] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:13:01,464 [Thread-248:4480] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:13:01,472 [Thread-249:9800] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:13:01,697 [Thread-252:4896] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:13:01,697 [Thread-253:9968] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:13:01,698 [Thread-254:9560] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:13:01,705 [Thread-255:9492] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:13:01,706 [Thread-256:7348] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:13:01,711 [Thread-257:2284] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:13:01,715 [Thread-258:9824] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:13:01,718 [Thread-259:4232] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:13:01,726 [Thread-260:7732] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:13:24,558 [Thread-266:1392] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:13:24,565 [Thread-267:5216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:13:24,569 [Thread-268:2676] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:13:24,575 [Thread-270:7316] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:13:24,578 [Thread-271:2412] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:13:24,580 [Thread-272:8448] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:13:24,584 [Thread-273:8004] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:13:24,594 [Thread-274:8852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:13:24,608 [Thread-276:8168] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:13:24,612 [Thread-278:8000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:13:24,618 [Thread-279:4776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:13:24,623 [Thread-280:6580] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:13:24,634 [Thread-282:6424] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:13:24,642 [Thread-281:6984] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:13:24,644 [Thread-283:4440] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:13:24,859 [Thread-286:6428] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:13:24,860 [Thread-287:1792] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:13:24,861 [Thread-288:3232] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:13:24,861 [Thread-289:8500] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:13:24,864 [Thread-290:7472] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:13:24,873 [Thread-291:7548] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:13:24,881 [Thread-292:10044] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:13:24,884 [Thread-293:9152] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:13:24,887 [Thread-294:6420] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:14:48,107 [Thread-300:9084] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:14:48,111 [Thread-301:10160] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:14:48,122 [Thread-303:6784] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:14:48,125 [Thread-304:2912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:14:48,127 [Thread-305:9584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:14:48,138 [Thread-306:1336] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:14:48,139 [Thread-307:4044] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:14:48,144 [Thread-308:7484] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:14:48,149 [Thread-309:996] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:14:48,166 [Thread-312:9940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:14:48,168 [Thread-314:9712] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:14:48,170 [Thread-313:6852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:14:48,175 [Thread-315:3260] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:14:48,178 [Thread-316:824] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:14:48,204 [Thread-317:2128] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:14:48,414 [Thread-320:9440] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:14:48,422 [Thread-321:8356] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:14:48,423 [Thread-322:1948] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:14:48,427 [Thread-323:3412] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:14:48,433 [Thread-324:5776] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:14:48,434 [Thread-325:9436] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:14:48,439 [Thread-326:9020] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:14:48,443 [Thread-327:8912] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:14:48,446 [Thread-328:9148] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:15:30,371 [Thread-330:8676] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:15:30,379 [Thread-331:2288] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:15:30,387 [Thread-332:8764] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:15:30,391 [Thread-333:5596] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:15:30,395 [Thread-334:9500] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:15:30,402 [Thread-335:3484] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:15:30,406 [Thread-336:7288] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:15:30,411 [Thread-337:9488] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:15:30,414 [Thread-338:8504] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:15:42,963 [Thread-344:4920] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:15:42,972 [Thread-345:6464] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:15:42,979 [Thread-346:6476] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:15:42,983 [Thread-347:8704] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:15:42,985 [Thread-348:9204] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:15:42,994 [Thread-350:3908] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:15:42,997 [Thread-351:9220] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:15:43,002 [Thread-352:6444] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:15:43,008 [Thread-353:3016] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:15:43,028 [Thread-356:9168] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:15:43,032 [Thread-357:8624] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:15:43,033 [Thread-358:5408] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:15:43,034 [Thread-359:10188] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:15:43,041 [Thread-360:4476] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:15:43,049 [Thread-361:4656] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:15:43,176 [Thread-364:4812] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:15:43,177 [Thread-365:3916] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:15:43,180 [Thread-366:3000] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:15:43,184 [Thread-367:8440] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:15:53,041 [Thread-373:2940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:15:53,049 [Thread-374:9936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:15:53,050 [Thread-375:8320] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:15:53,054 [Thread-376:9108] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:15:53,057 [Thread-378:1940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:15:53,066 [Thread-379:8768] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:15:53,073 [Thread-380:9884] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:15:53,075 [Thread-381:9888] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:15:53,082 [Thread-382:8304] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:15:53,096 [Thread-385:2000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:15:53,099 [Thread-386:3872] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:15:53,105 [Thread-387:7804] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:15:53,112 [Thread-388:9396] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:15:53,116 [Thread-389:9852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:15:53,122 [Thread-390:9060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:16:15,955 [Thread-399:9816] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:16:15,957 [Thread-398:4616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:16:15,964 [Thread-400:4064] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:16:15,970 [Thread-403:2216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:16:15,973 [Thread-402:8812] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:16:15,973 [Thread-401:9284] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:16:15,990 [Thread-405:2648] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:16:15,995 [Thread-406:7528] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:16:16,002 [Thread-407:1568] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:16:16,010 [Thread-410:8228] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:16:16,013 [Thread-411:9620] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:16:16,021 [Thread-412:7580] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:16:16,024 [Thread-413:3012] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:16:16,043 [Thread-414:9308] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:16:16,049 [Thread-415:7816] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:17:53,618 [Thread-423:4108] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:17:53,634 [Thread-427:4584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:17:53,637 [Thread-425:7616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:17:53,640 [Thread-428:2840] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:17:53,641 [Thread-426:7112] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:17:53,644 [Thread-429:6496] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:17:53,649 [Thread-430:7428] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:17:53,669 [Thread-432:10092] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:17:53,672 [Thread-433:7556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:17:53,680 [Thread-435:8884] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:17:53,685 [Thread-436:4480] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:17:53,690 [Thread-437:9800] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:17:53,713 [Thread-438:4896] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:17:53,718 [Thread-439:7348] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:17:53,723 [Thread-440:9492] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:18:32,932 [Thread-10:9948] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:18:32,934 [Thread-9:9132] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:18:32,942 [Thread-11:3972] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:18:32,945 [Thread-12:3888] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:18:32,951 [Thread-13:9328] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:18:32,960 [Thread-15:9992] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:18:32,964 [Thread-16:10052] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:18:32,971 [Thread-17:9780] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:18:32,977 [Thread-18:7456] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:18:32,993 [Thread-20:7740] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:18:33,009 [Thread-21:10216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:18:33,018 [Thread-22:7564] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:18:33,024 [Thread-23:6864] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:18:33,029 [Thread-24:6660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:18:33,035 [Thread-27:5084] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:18:33,050 [Thread-25:7076] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /webscan/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 23, in webscan
+    return render(request,'webcan.html',locals( ))
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: webcan.html
+2017-03-30 22:19:25,041 [Thread-35:7484] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:19:25,047 [Thread-37:9940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:19:25,054 [Thread-39:9960] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:19:25,057 [Thread-36:996] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:19:25,062 [Thread-40:6852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:19:25,064 [Thread-41:3260] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:19:25,068 [Thread-42:824] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:19:25,074 [Thread-43:2128] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:19:25,088 [Thread-44:9136] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:19:25,097 [Thread-47:8356] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:19:25,107 [Thread-48:1948] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:19:25,108 [Thread-50:5776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:19:25,109 [Thread-49:3412] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:19:25,110 [Thread-51:9436] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:19:25,112 [Thread-45:5156] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /webscan/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 23, in webscan
+    return render(request,'webcan.html',locals( ))
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: webcan.html
+2017-03-30 22:19:25,154 [Thread-52:9020] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:20:00,579 [Thread-7:3000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:20:00,585 [Thread-8:8440] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:20:00,591 [Thread-10:8552] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:20:00,594 [Thread-11:9468] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:20:00,598 [Thread-12:5604] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:20:00,603 [Thread-13:3976] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:20:00,612 [Thread-15:8744] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:20:00,615 [Thread-16:8556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:20:00,625 [Thread-17:7940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:20:00,631 [Thread-14:9404] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /webscan/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 23, in webscan
+    return render(request,'webcan.html',locals( ))
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: webcan.html
+2017-03-30 22:20:00,648 [Thread-19:8684] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:20:00,667 [Thread-20:7720] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:20:00,689 [Thread-21:9368] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:20:00,693 [Thread-22:3408] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:20:00,696 [Thread-23:8484] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:20:00,699 [Thread-24:856] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:20:23,110 [Thread-28:3872] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /webscan/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 23, in webscan
+    return render(request,'webcan.html',locals( ))
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: webcan.html
+2017-03-30 22:20:56,354 [Thread-33:9104] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /webscan/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 23, in webscan
+    return render(request,'webcan.html',locals( ))
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: webcan.html
+2017-03-30 22:23:14,327 [Thread-39:7172] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /webscan/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 23, in webscan
+    return render(request,'webcan.html',locals( ))
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: webcan.html
+2017-03-30 22:27:37,634 [Thread-47:9600] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:27:37,643 [Thread-48:8336] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:27:37,648 [Thread-49:10008] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:27:37,654 [Thread-50:9112] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:27:37,661 [Thread-51:3824] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:27:37,666 [Thread-53:9000] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:27:37,671 [Thread-52:6936] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:27:37,675 [Thread-54:7936] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:27:37,679 [Thread-55:9588] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:27:37,897 [Thread-56:9844] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/favicon.ico
+2017-03-30 22:27:47,376 [Thread-58:8772] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:27:47,379 [Thread-61:9756] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:27:47,381 [Thread-60:9656] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:27:47,381 [Thread-62:10016] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:27:47,383 [Thread-59:10080] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:27:47,386 [Thread-63:9828] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:27:47,400 [Thread-64:7348] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:27:47,405 [Thread-65:8220] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:27:47,409 [Thread-66:9292] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:27:55,407 [Thread-68:7124] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/bootstrap.min14ed.css
+2017-03-30 22:27:55,410 [Thread-69:9264] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/font-awesome.min93e3.css
+2017-03-30 22:27:55,413 [Thread-70:8400] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/animate.min.css
+2017-03-30 22:27:55,418 [Thread-71:3540] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/css/style.min862f.css
+2017-03-30 22:27:55,421 [Thread-72:9492] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/jquery.min.js
+2017-03-30 22:27:55,426 [Thread-73:8424] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/bootstrap.min.js
+2017-03-30 22:27:55,427 [Thread-74:5128] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/plugins/layer/layer.min.js
+2017-03-30 22:27:55,432 [Thread-75:2868] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/content.min.js
+2017-03-30 22:27:55,438 [Thread-76:2412] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/js/welcome.min.js
+2017-03-30 22:27:55,609 [Thread-77:1952] [django.request:182] [base:get_response] [WARNING]- Not Found: /webscan/favicon.ico
+2017-03-30 22:29:27,334 [Thread-81:9660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:29:27,337 [Thread-82:6868] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:29:27,339 [Thread-84:7520] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:29:27,340 [Thread-83:6000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:29:27,349 [Thread-85:3868] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:29:27,350 [Thread-86:3712] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:29:27,361 [Thread-88:8892] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:29:27,373 [Thread-89:9764] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:29:27,378 [Thread-90:6952] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:29:27,388 [Thread-92:8692] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:29:27,397 [Thread-93:9320] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:29:27,401 [Thread-94:4380] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:29:27,405 [Thread-95:9028] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:29:27,413 [Thread-96:9104] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:29:27,418 [Thread-97:8448] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:30:43,214 [Thread-116:7320] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:30:43,220 [Thread-117:7172] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:30:43,225 [Thread-118:9044] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:30:43,225 [Thread-119:2216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:30:43,228 [Thread-120:3256] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:30:43,233 [Thread-122:9336] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:30:43,245 [Thread-123:8696] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:30:43,245 [Thread-124:10176] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:30:43,255 [Thread-125:3120] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:30:43,259 [Thread-126:8324] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:30:43,271 [Thread-129:7912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:30:43,279 [Thread-130:4972] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:30:43,285 [Thread-131:7768] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:30:43,294 [Thread-132:3384] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:30:43,299 [Thread-134:3528] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:30:44,846 [Thread-137:8812] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-30 22:30:53,725 [Thread-138:9600] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-03-30 22:31:01,171 [Thread-141:3824] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:31:01,176 [Thread-142:9000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:31:01,177 [Thread-143:6936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:31:01,204 [Thread-144:7936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:31:01,207 [Thread-145:9588] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:31:01,212 [Thread-146:9844] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:31:01,216 [Thread-147:1344] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:31:01,222 [Thread-148:10120] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:31:01,229 [Thread-149:9888] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:31:01,238 [Thread-150:9780] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:31:01,246 [Thread-152:8628] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:31:01,250 [Thread-153:9720] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:31:01,261 [Thread-155:8964] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:31:01,263 [Thread-156:6684] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:31:01,270 [Thread-157:8796] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:31:01,283 [Thread-159:1616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:31:01,286 [Thread-160:8900] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:31:02,491 [Thread-162:9984] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:31:02,517 [Thread-163:9140] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:31:02,526 [Thread-164:3516] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:31:02,528 [Thread-167:9092] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:31:02,531 [Thread-166:8616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:31:02,531 [Thread-165:8984] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:31:02,532 [Thread-168:9208] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:31:02,542 [Thread-170:7048] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:31:02,547 [Thread-171:10128] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:31:02,579 [Thread-172:3416] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:31:02,585 [Thread-173:3912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:31:02,586 [Thread-174:9628] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:31:02,587 [Thread-175:8200] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:31:02,591 [Thread-176:9084] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:31:02,595 [Thread-177:9516] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:31:14,112 [Thread-185:7724] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:31:14,122 [Thread-186:9080] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:31:14,130 [Thread-188:1732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:31:14,133 [Thread-189:9124] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:31:14,134 [Thread-190:9648] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:31:14,135 [Thread-191:6764] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:31:14,138 [Thread-192:9168] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:31:14,139 [Thread-193:4836] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:31:14,151 [Thread-195:656] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:31:14,174 [Thread-197:6932] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:31:14,187 [Thread-199:9396] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:31:14,193 [Thread-198:8660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:31:14,194 [Thread-200:1948] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:31:14,204 [Thread-201:2724] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:31:14,212 [Thread-202:2732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:33:36,193 [Thread-217:9368] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:33:36,225 [Thread-228:6996] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:33:36,229 [Thread-229:1860] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:33:36,233 [Thread-230:856] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:33:36,239 [Thread-231:3060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:33:36,262 [Thread-233:7868] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:33:36,265 [Thread-234:8344] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:33:40,761 [Thread-239:8280] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v2.html
+2017-03-30 22:34:02,691 [Thread-249:9108] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:34:02,701 [Thread-252:8688] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:34:02,708 [Thread-253:1012] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:34:02,718 [Thread-254:8436] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:34:02,747 [Thread-263:9764] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:34:02,756 [Thread-265:8692] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:34:02,776 [Thread-266:9320] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:35:10,634 [Thread-288:4584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:35:10,639 [Thread-290:1212] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:35:10,647 [Thread-291:9916] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:35:10,659 [Thread-293:2644] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:35:10,664 [Thread-294:7512] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:35:10,667 [Thread-295:9160] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:35:10,673 [Thread-296:9680] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:35:55,432 [Thread-307:7912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:35:55,471 [Thread-318:8416] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:35:55,479 [Thread-319:3660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:35:55,503 [Thread-320:10008] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:35:55,507 [Thread-322:3824] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:35:55,512 [Thread-321:9112] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:35:55,527 [Thread-324:6936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:38:42,349 [Thread-334:3260] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:38:42,376 [Thread-345:8960] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:38:42,380 [Thread-346:9976] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:38:42,387 [Thread-348:2880] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:38:42,391 [Thread-349:5068] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:38:42,406 [Thread-350:7072] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:38:42,410 [Thread-351:8912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:42:19,826 [Thread-366:2884] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/graph_echarts.html
+2017-03-30 22:43:32,219 [Thread-386:8248] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:43:32,250 [Thread-398:7948] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:43:32,254 [Thread-399:1816] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:43:32,262 [Thread-400:10016] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:43:32,266 [Thread-401:9580] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:43:32,267 [Thread-403:9908] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:43:32,272 [Thread-404:9660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:44:11,643 [Thread-429:10116] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:44:11,652 [Thread-431:1412] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:44:11,654 [Thread-432:7512] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:44:11,661 [Thread-433:9160] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:44:11,673 [Thread-434:9596] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:44:11,676 [Thread-435:1212] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:44:11,683 [Thread-437:9916] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:44:15,338 [Thread-448:2840] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/layouts.html
+2017-03-30 22:44:18,618 [Thread-451:2232] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:44:18,637 [Thread-456:9532] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:44:18,640 [Thread-455:9108] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:44:18,644 [Thread-457:7196] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:44:18,657 [Thread-460:9012] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:44:18,662 [Thread-459:9156] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:44:18,667 [Thread-461:9560] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:44:30,001 [Thread-470:3524] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:44:30,029 [Thread-481:2780] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:44:30,030 [Thread-482:1344] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:44:30,036 [Thread-483:7936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:44:30,039 [Thread-484:3824] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:44:30,045 [Thread-485:9588] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:44:30,055 [Thread-487:8548] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:44:34,591 [Thread-502:7476] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/layouts.html
+2017-03-30 22:44:39,746 [Thread-506:6428] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:44:39,761 [Thread-507:10128] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:44:39,764 [Thread-509:7316] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:44:39,764 [Thread-508:8924] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:44:39,790 [Thread-514:6880] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:44:39,794 [Thread-515:8772] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:44:39,798 [Thread-516:9316] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:46:43,389 [Thread-525:9244] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:46:43,420 [Thread-536:8248] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:46:43,425 [Thread-538:7372] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:46:43,429 [Thread-539:3576] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:46:43,430 [Thread-540:7312] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:46:43,433 [Thread-541:8320] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:46:43,451 [Thread-542:6660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:47:02,808 [Thread-558:6684] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:47:02,843 [Thread-567:8296] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:47:02,847 [Thread-570:2932] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:47:02,855 [Thread-571:9896] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:47:02,857 [Thread-573:8100] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:47:02,864 [Thread-572:5552] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:47:02,877 [Thread-574:9296] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:47:02,880 [Thread-575:8440] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:47:17,835 [Thread-591:3384] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:47:17,843 [Thread-592:7608] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:47:17,850 [Thread-593:9260] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:47:17,860 [Thread-596:8200] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:47:17,861 [Thread-595:7788] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:47:17,864 [Thread-597:8180] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:47:17,872 [Thread-598:3560] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:47:17,876 [Thread-599:9224] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:47:17,883 [Thread-600:7732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:47:17,895 [Thread-603:6468] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:47:17,901 [Thread-604:3524] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:47:17,905 [Thread-605:9232] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:47:17,910 [Thread-606:10176] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:47:17,917 [Thread-607:9000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:47:17,921 [Thread-608:7528] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:47:39,829 [Thread-619:5596] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 21: 'static'. Did you forget to register or load this tag?
+2017-03-30 22:48:29,755 [Thread-636:3872] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:48:29,769 [Thread-637:7556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:48:29,772 [Thread-638:2124] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:48:29,775 [Thread-639:8876] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:48:29,780 [Thread-640:7340] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:48:29,786 [Thread-641:3488] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:48:29,789 [Thread-642:9112] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:48:29,793 [Thread-643:6740] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v148b2.html
+2017-03-30 22:48:29,794 [Thread-644:8900] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:48:29,805 [Thread-645:8832] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:48:29,808 [Thread-646:10236] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:48:29,812 [Thread-647:8524] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:48:29,815 [Thread-648:1936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:48:29,819 [Thread-649:7940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:48:29,826 [Thread-650:8216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:48:29,835 [Thread-651:7244] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:48:49,667 [Thread-657:8464] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:48:49,676 [Thread-658:7844] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:48:49,683 [Thread-660:9868] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v148b2.html
+2017-03-30 22:48:49,687 [Thread-659:10104] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:48:49,690 [Thread-661:2884] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:48:49,696 [Thread-663:1720] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:48:49,697 [Thread-662:8532] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:48:49,698 [Thread-664:9656] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:48:49,707 [Thread-665:4476] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:48:49,727 [Thread-666:9884] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:48:49,738 [Thread-668:9680] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:48:49,742 [Thread-669:2940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:48:49,743 [Thread-670:8428] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:48:49,757 [Thread-672:2948] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:48:49,762 [Thread-671:6952] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:48:49,766 [Thread-673:10164] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:49:09,120 [Thread-681:9932] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:49:09,128 [Thread-682:8400] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:49:09,135 [Thread-683:4016] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:49:09,148 [Thread-684:10084] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:49:09,167 [Thread-686:5060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:49:09,199 [Thread-687:8556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:49:09,210 [Thread-688:7740] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:49:09,215 [Thread-689:8732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:49:09,249 [Thread-690:7768] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:49:09,273 [Thread-692:4920] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:49:09,320 [Thread-698:2808] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:49:09,329 [Thread-700:9168] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:49:09,334 [Thread-699:6332] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:49:09,335 [Thread-701:9404] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:49:09,341 [Thread-702:7804] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:49:17,187 [Thread-711:6660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v1.html
+2017-03-30 22:49:26,824 [Thread-715:9660] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:49:26,836 [Thread-716:10220] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:49:26,837 [Thread-718:9900] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:49:26,838 [Thread-719:4532] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:49:26,844 [Thread-717:9720] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:49:26,851 [Thread-720:3416] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:49:26,857 [Thread-721:8728] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:49:26,864 [Thread-723:8224] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:49:26,871 [Thread-724:8912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:49:26,875 [Thread-725:9056] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:49:26,880 [Thread-726:7420] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:49:26,886 [Thread-727:4776] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:49:26,898 [Thread-728:7616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:49:26,904 [Thread-729:9496] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:49:26,909 [Thread-730:8168] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:49:32,081 [Thread-733:6684] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/layouts.html
+2017-03-30 22:49:39,615 [Thread-739:8908] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v2.html
+2017-03-30 22:50:25,110 [Thread-747:4584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:50:25,114 [Thread-749:10116] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:50:25,115 [Thread-748:9596] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:50:25,115 [Thread-750:3060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:50:25,123 [Thread-751:3176] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:50:25,133 [Thread-752:856] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:50:25,140 [Thread-754:2232] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:50:25,151 [Thread-755:9624] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:50:25,156 [Thread-756:10188] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:50:25,161 [Thread-757:4456] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:50:25,166 [Thread-758:7560] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:50:25,170 [Thread-759:8720] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:50:25,175 [Thread-760:7196] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:50:25,187 [Thread-761:9012] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:50:25,191 [Thread-762:9560] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:50:34,575 [Thread-773:3824] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:50:34,583 [Thread-774:8796] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:50:34,584 [Thread-776:1344] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:50:34,592 [Thread-775:9584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:50:34,595 [Thread-777:3976] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:50:34,600 [Thread-778:6852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:50:34,605 [Thread-780:9988] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:50:34,613 [Thread-781:9612] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:50:34,617 [Thread-782:9208] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:50:34,620 [Thread-783:10060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:50:34,627 [Thread-784:8628] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:50:34,632 [Thread-785:9588] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:50:34,637 [Thread-786:9928] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:50:34,640 [Thread-787:2216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:50:34,649 [Thread-788:9852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:50:40,413 [Thread-800:9060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:50:40,417 [Thread-802:8420] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:50:40,432 [Thread-803:2648] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:50:40,433 [Thread-804:9616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:50:40,435 [Thread-805:7760] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:50:40,438 [Thread-806:2836] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:50:40,446 [Thread-807:7076] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:50:40,452 [Thread-808:9520] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:50:40,460 [Thread-809:8864] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:50:40,464 [Thread-810:5432] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:50:40,469 [Thread-811:8808] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:50:40,473 [Thread-812:9332] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:50:40,479 [Thread-813:4576] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:50:40,493 [Thread-814:8688] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:50:40,513 [Thread-820:1012] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:50:46,288 [Thread-828:4832] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:50:46,290 [Thread-829:6052] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:50:46,301 [Thread-830:6840] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:50:46,311 [Thread-832:5100] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:50:46,312 [Thread-833:10088] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:50:46,319 [Thread-834:10224] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:50:46,324 [Thread-835:9808] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:50:46,327 [Thread-836:9600] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:50:46,336 [Thread-837:9816] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:50:46,342 [Thread-838:9644] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:50:46,348 [Thread-839:9916] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:50:46,361 [Thread-840:7228] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:50:46,361 [Thread-841:2444] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:50:46,367 [Thread-842:8592] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:50:46,372 [Thread-843:1792] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:50:49,118 [Thread-857:8484] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:50:49,128 [Thread-858:3872] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/jquery.min.js
+2017-03-30 22:50:49,133 [Thread-859:7556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:50:49,138 [Thread-860:2124] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:50:49,143 [Thread-862:7340] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:50:49,147 [Thread-863:3488] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:50:49,150 [Thread-864:9112] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:50:49,156 [Thread-865:6740] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:50:49,164 [Thread-866:8900] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:50:49,173 [Thread-868:10236] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:50:49,180 [Thread-869:8524] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:50:49,185 [Thread-870:1936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:50:49,186 [Thread-871:8216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:50:49,193 [Thread-873:7244] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:50:49,194 [Thread-872:7940] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:51:34,862 [Thread-889:9680] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:51:34,871 [Thread-891:8428] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:51:34,874 [Thread-892:2948] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:51:34,876 [Thread-893:3972] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:51:34,886 [Thread-895:6952] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:51:34,888 [Thread-896:10164] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:51:34,895 [Thread-897:5156] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:51:34,899 [Thread-898:8160] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:51:34,919 [Thread-900:8600] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:51:34,920 [Thread-901:2664] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:51:34,929 [Thread-902:7944] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:51:34,934 [Thread-903:7236] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:51:34,937 [Thread-904:8584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:51:34,938 [Thread-905:9264] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:51:39,565 [Thread-925:4016] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:51:39,574 [Thread-927:9124] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/bootstrap.min.js
+2017-03-30 22:51:39,575 [Thread-928:5060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/metisMenu/jquery.metisMenu.js
+2017-03-30 22:51:39,582 [Thread-930:7740] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/slimscroll/jquery.slimscroll.min.js
+2017-03-30 22:51:39,586 [Thread-931:8732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/layer/layer.min.js
+2017-03-30 22:51:39,588 [Thread-932:9044] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/hplus.min.js
+2017-03-30 22:51:39,597 [Thread-933:7768] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/contabs.min.js
+2017-03-30 22:51:39,602 [Thread-934:8096] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/js/plugins/pace/pace.min.js
+2017-03-30 22:51:39,613 [Thread-937:9500] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:51:39,616 [Thread-936:8344] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:51:39,624 [Thread-938:9244] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:51:39,629 [Thread-939:4920] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:51:39,632 [Thread-940:8408] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:51:39,639 [Thread-941:8280] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:53:03,928 [Thread-957:9888] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:53:03,965 [Thread-967:3912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:53:03,970 [Thread-969:8580] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:53:03,971 [Thread-970:10136] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:53:03,980 [Thread-968:9556] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:53:03,992 [Thread-972:2000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:53:03,996 [Thread-973:4408] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:53:05,237 [Thread-984:10068] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v2.html
+2017-03-30 22:53:17,479 [Thread-986:9172] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/login.html
+2017-03-30 22:53:21,361 [Thread-989:10140] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:53:21,373 [Thread-990:9160] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:53:21,379 [Thread-992:3060] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:53:21,382 [Thread-991:9596] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:53:21,402 [Thread-997:4456] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:53:21,408 [Thread-998:10172] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:53:21,412 [Thread-999:7560] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:53:25,621 [Thread-1017:7732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:53:25,622 [Thread-1018:3524] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:53:25,623 [Thread-1019:10176] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:53:25,625 [Thread-1020:6468] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:53:25,669 [Thread-1021:8200] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:53:25,670 [Thread-1022:10120] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:53:25,694 [Thread-1023:7936] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:53:26,514 [Thread-1037:9852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/favicon.ico
+2017-03-30 22:56:07,168 [Thread-1045:10180] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:56:07,205 [Thread-1055:6932] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:56:07,210 [Thread-1056:7632] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:56:07,211 [Thread-1057:9328] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:56:07,217 [Thread-1059:9000] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:56:07,229 [Thread-1060:9080] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:56:07,233 [Thread-1061:4532] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:56:12,991 [Thread-1072:8616] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v1.html
+2017-03-30 22:56:19,745 [Thread-1074:4656] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:56:19,751 [Thread-1075:2932] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:56:19,784 [Thread-1076:8960] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:56:19,787 [Thread-1077:8100] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:56:19,788 [Thread-1078:1296] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:56:19,795 [Thread-1080:3912] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:56:19,801 [Thread-1081:5080] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:56:24,323 [Thread-1089:2884] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/layouts.html
+2017-03-30 22:56:24,400 [Thread-1090:10068] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-30 22:56:27,977 [Thread-1091:7996] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v1.html
+2017-03-30 22:56:52,630 [Thread-1100:7708] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:56:52,633 [Thread-1101:1568] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:56:52,635 [Thread-1102:2780] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:56:52,639 [Thread-1103:7788] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:56:52,641 [Thread-1104:7732] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:56:52,654 [Thread-1105:3524] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:56:52,709 [Thread-1106:10176] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:56:58,508 [Thread-1110:8796] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/login.html
+2017-03-30 22:57:03,385 [Thread-1112:1344] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/profile_small.jpg
+2017-03-30 22:57:03,389 [Thread-1114:6852] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a4.jpg
+2017-03-30 22:57:03,390 [Thread-1115:9988] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a1.jpg
+2017-03-30 22:57:03,391 [Thread-1113:9584] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a7.jpg
+2017-03-30 22:57:03,391 [Thread-1116:9612] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a2.jpg
+2017-03-30 22:57:03,394 [Thread-1117:9208] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a3.jpg
+2017-03-30 22:57:03,460 [Thread-1119:9588] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/img/a8.jpg
+2017-03-30 22:57:04,637 [Thread-1122:2216] [django.request:182] [base:get_response] [WARNING]- Not Found: /index/index_v2.html
+2017-03-30 22:57:54,156 [Thread-1136:4832] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 45, in search
+    return render(request,'search.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: search.html
+2017-04-04 15:11:41,449 [Thread-2:9492] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-04-04 15:11:41,673 [Thread-3:9496] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-04 15:11:46,859 [Thread-5:9584] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+2017-04-04 15:13:07,670 [Thread-8:8224] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+2017-04-04 15:13:27,468 [Thread-2:4164] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 13, in index
+    return render(request,'index.html',locals())
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\template\base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+2017-04-04 15:15:20,595 [Thread-20:10140] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-04 15:19:50,013 [Thread-57:9884] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /webscan/
+2017-04-04 15:49:39,745 [Thread-138:9652] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-04-04 15:50:22,399 [Thread-2:9924] [django.request:182] [base:get_response] [WARNING]- Not Found: /
+2017-04-04 19:24:52,834 [Thread-4:7344] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-04 20:39:18,845 [Thread-5:8672] [django.request:182] [base:get_response] [WARNING]- Not Found: /scan/
+2017-04-05 21:52:59,565 [Thread-3:9112] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-06 19:11:26,225 [Thread-3:1552] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-06 21:00:07,635 [Thread-2:8048] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /addtask/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 72, in addtask
+    return HttpResponseRedirect('http://localhost/scan')
+NameError: name 'HttpResponseRedirect' is not defined
+2017-04-06 21:32:11,301 [Thread-7:3808] [django.request:182] [base:get_response] [WARNING]- Not Found: /delete
+2017-04-06 21:33:05,733 [Thread-6:8880] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /delete
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\middleware\common.py", line 62, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\middleware\common.py", line 100, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/delete/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2017-04-06 21:34:45,566 [Thread-4:7684] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /delete/
+2017-04-07 09:01:50,023 [Thread-3:8232] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-07 09:01:51,348 [Thread-4:184] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 90, in scan
+    count = taskcontrol.getpage(tablename='tasksdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 09:02:51,334 [Thread-2:10752] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 91, in scan
+    count = taskcontrol.getpage(tablename='tasksdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 09:09:15,209 [Thread-38:5660] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 91, in scan
+    count = taskcontrol.getpage(tablename='tasksdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 11:47:43,483 [Thread-2:11252] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 95, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 11:48:19,812 [Thread-2:5536] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 95, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 11:48:20,914 [Thread-3:5904] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 95, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 12:30:40,841 [Thread-3:11808] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 93, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 12:31:19,850 [Thread-2:6252] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 94, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 74, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 12:32:27,476 [Thread-2:548] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 92, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 73, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 12:32:42,029 [Thread-5:4024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 92, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 73, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 12:34:59,778 [Thread-2:4264] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 92, in scan
+    count = taskcontrol.getpage(tablename='taslsdata')
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 73, in getpage
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2017-04-07 13:09:39,941 [Thread-11:11920] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /addtask/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 71, in addtask
+    taskcontrol.addtask(taskname,taskdata,taskport)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 19, in addtask
+    ip = re.split('-',taskdata)
+  File "C:\Users\cuijianxiong\django_test\lib\re.py", line 203, in split
+    return _compile(pattern, flags).split(string, maxsplit)
+TypeError: expected string or bytes-like object
+2017-04-07 13:10:27,664 [Thread-2:11508] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /addtask/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 71, in addtask
+    taskcontrol.addtask(taskname,taskdata,taskport)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 19, in addtask
+    ip = re.split('-',taskdata)
+  File "C:\Users\cuijianxiong\django_test\lib\re.py", line 203, in split
+    return _compile(pattern, flags).split(string, maxsplit)
+TypeError: expected string or bytes-like object
+2017-04-07 13:10:39,510 [Thread-9:12180] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /addtask/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 71, in addtask
+    taskcontrol.addtask(taskname,taskdata,taskport)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 19, in addtask
+    ip = re.split('-',taskdata)
+  File "C:\Users\cuijianxiong\django_test\lib\re.py", line 203, in split
+    return _compile(pattern, flags).split(string, maxsplit)
+TypeError: expected string or bytes-like object
+2017-04-07 13:11:41,355 [Thread-11:1340] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /addtask/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 71, in addtask
+    taskcontrol.addtask(taskname,taskdata,taskport)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 19, in addtask
+    ip = re.split('-',taskdata)
+  File "C:\Users\cuijianxiong\django_test\lib\re.py", line 203, in split
+    return _compile(pattern, flags).split(string, maxsplit)
+TypeError: expected string or bytes-like object
+2017-04-07 13:12:02,626 [Thread-13:9796] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /addtask/
+Traceback (most recent call last):
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cuijianxiong\django_test\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\views.py", line 71, in addtask
+    taskcontrol.addtask(taskname,taskdata,taskport)
+  File "C:\Users\cuijianxiong\Desktop\web_search\scantool\tool\taskcontrol.py", line 19, in addtask
+    ip = re.split('-',taskdata)
+  File "C:\Users\cuijianxiong\django_test\lib\re.py", line 203, in split
+    return _compile(pattern, flags).split(string, maxsplit)
+TypeError: expected string or bytes-like object
+2017-04-07 17:03:00,687 [Thread-4:5276] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-08 11:53:41,025 [Thread-3:7752] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-08 11:53:43,821 [Thread-4:7360] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /scan/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\backends\mysql\base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\cursors.py", line 308, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 820, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 1002, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 1285, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 966, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 394, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\err.py", line 120, in raise_mysql_exception
+    _check_mysql_exception(errinfo)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\err.py", line 112, in _check_mysql_exception
+    raise errorclass(errno, errorvalue)
+pymysql.err.ProgrammingError: (1146, "Table 'http_information.scantool_tasksdata' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 98, in scan
+    data = result_list = getPage(request,result_list)
+  File "C:\Users\Administrator\Desktop\web_search\scantool\views.py", line 54, in getPage
+    result_list = paginator.page(page)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\paginator.py", line 50, in page
+    number = self.validate_number(number)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\paginator.py", line 39, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\paginator.py", line 86, in _get_num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\core\paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\models\query.py", line 371, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\models\sql\query.py", line 483, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\models\sql\query.py", line 464, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\django\db\backends\mysql\base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\cursors.py", line 308, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 820, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 1002, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 1285, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 966, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\connections.py", line 394, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\err.py", line 120, in raise_mysql_exception
+    _check_mysql_exception(errinfo)
+  File "C:\Users\Administrator\django_basic_venv\lib\site-packages\pymysql\err.py", line 112, in _check_mysql_exception
+    raise errorclass(errno, errorvalue)
+django.db.utils.ProgrammingError: (1146, "Table 'http_information.scantool_tasksdata' doesn't exist")
+2017-04-09 12:18:53,692 [Thread-3:8968] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-09 23:02:08,885 [Thread-3:10016] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-10 11:13:44,861 [Thread-3:7764] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-10 21:15:19,324 [Thread-3:7548] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico

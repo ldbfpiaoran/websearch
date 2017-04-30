@@ -1,0 +1,176 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html >
+<head>
+    <title>搜索页</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap -->
+    <link href="{% static 'bootstrap-3.3.7/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="" type="text/css" rel="stylesheet">
+
+    <!-- global styles -->
+    <!-- <link rel="stylesheet" type="text/css" href="/static/fontsearch/css/compiled/layout.css"> -->
+    <link rel="stylesheet" type="text/css" href="/static/fontsearch/css/compiled/elements.css">
+    <link rel="stylesheet" type="text/css" href="/static/fontsearch/css/compiled/icons.css">
+
+    <!-- libraries -->
+    <!-- <link rel="stylesheet" type="text/css" href="/static/fontsearch/css/lib/font-awesome.css"> -->
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="/static/fontsearch/css/compiled/signin.css" type="text/css" media="screen"/>
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="/static/fontsearch/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/static/fontsearch/css/site.min.css" rel="stylesheet">
+    <!-- <link href="/static/fontsearch/css/font-awesome.css" rel="stylesheet"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<img src="/static/fontsearch/img/bgs/bgs.jpg" width="100%" height="100%"/>
+<header class="jumbotron">
+    {%if username != ''%}
+    <div class="site-nav"><a href="/scan/">{{username}}</a> <span>/</span> <a href="/index/">关于</a>
+        {%else%}
+        <div class="site-nav"><a href="/login">登陆</a> <span>/</span> <a href="/index/">关于</a>
+            {% endif %}
+
+        </div>
+        <!--<div class="container">-->
+        <!--<div class="row">-->
+        <!--<div class="col-xs-12">-->
+
+        <!--<p>主机详细信息<br>-->
+
+        <!--</p>-->
+
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+
+</header>
+
+
+    <div class="container">
+        <div class="content-wrap">
+
+            <div class="login-wrapper">
+
+                <img class="logo" src="/static/fontsearch/img/logo-white.png">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="site-header1 " style="">
+                                <!--
+                                            <div class="container"> -->
+                                <div class="row">
+                                    <div class="col-xs-11">
+                                            <input type="text" id="content" name="content"
+                                                       class="form-control search clearable"
+                                                       onkeydown="if(event.keyCode==13){sendsearch(1,1);}"
+                                                       placeholder="搜索组件，例如：MySQL">
+                                                <i class="fa fa-search" onclick="sendsearch(2,1);"></i>
+
+                                        <form action="/search/" method="GET" role="search" lpformnum="1"
+                                              _lpchecked="1" id="formid">
+                                                {% csrf_token%}
+                                            <div class="form-group">
+                                                <input type="hidden" id="page" name="page" value='0'>
+                                                <input type="hidden" id="searchcontent" name="searchcontent"  >
+
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/fontsearch/js/jquery.min.js"></script>
+    <script src="/static/fontsearch/js/bootstrap.min.js"></script>
+    <script src="/static/fontsearch/js/geopattern.min.js"></script>
+    <script src="/static/fontsearch/js/ZeroClipboard.min.js"></script>
+    <script src="/static/fontsearch/js/localforage.nopromises.min.js"></script>
+    <script src="/static/fontsearch/js/site.min.js"></script>
+    <script src="/static/fontsearch/js/h.js" type="text/javascript"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script src="/static/fontsearch/js/bootstrap.js"></script>
+
+    <script src="/static/fontsearch/js/theme.js"></script>
+
+    <!-- pre load bg imgs -->
+    <script type="text/javascript">
+
+        var xmlhttp;
+        var message = ''
+        var currpage = 1;
+        var nextpagehtml;
+        var pagesize = 0;
+        var nowpage = 0;
+        var jobs = null;
+        //创建XMLHttpRequest对象
+        function GetXmlHttp(xmlhttp) {
+            if (window.XMLHttpRequest) //非IE浏览器，用xmlhttprequest对象创建
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            else if (window.ActiveXObject) //IE浏览器用activexobject对象创建
+            {
+
+                try {
+                    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP.3.0");
+                } catch (e) {
+                    try {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+
+
+                    }
+                }
+            }
+            return xmlhttp;
+        }
+
+        function sendsearch(issearch, num) {
+
+            content =document.getElementById('content').value;
+            if (issearch == '2' || content == "") {
+                document.getElementById('content').value = "";
+            }
+            // else
+
+            document.getElementById('searchcontent').value=content;
+
+
+            document.getElementById("formid").submit();
+        }
+
+
+    </script>
+    <script src="/static/fontsearch/js/base64.js"></script>
+</body>
+</html>
