@@ -64,3 +64,4 @@ random_str  为生成cookie函数 自己改吧<br>
 7 有啥问题最好邮件问我  github我不咋上<br>
 8 渣渣写的东西  大牛轻喷啊<br>
 9 有乙方缺打杂的么也可以联系我<br>
+10 邮件bfpiaoran@qq.com<br>
