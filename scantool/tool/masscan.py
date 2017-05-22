@@ -12,7 +12,7 @@ def masscan(name,port,host):
         try:
             path = os.getcwd()
             os.chdir(path+'\\scantool\\masscan\\windows_64')
-            os.system('masscan.exe -p%s %s -oL %s'%(port,host,tmp))
+            os.system('masscan.exe -p%s %s -oL %s --rate=10000'%(port,host,tmp))
             result_file = open(tmp, 'r')
             result_json = result_file.readlines()
             result_file.close()
@@ -32,7 +32,7 @@ def masscan(name,port,host):
     elif osname is 'posix':
         try:
             os.chdir('scantool/masscan/linux_64')
-            os.system('masscan -p%s %s -oL %s' % (port, host, tmp))
+            os.system('masscan -p%s %s -oL %s --rate=10000' % (port, host, tmp))
             result_file = open(tmp, 'r')
             result_json = result_file.readlines()
             result_file.close()
